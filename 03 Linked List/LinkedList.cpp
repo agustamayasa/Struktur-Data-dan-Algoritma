@@ -82,14 +82,16 @@ void LinkedList::deleteFromTail(){
 	else
 	{
 		Node* tmp = head;
-		Node* tmpDel = tail;
+		Node* tmpDel;
 		while(tmp->next->next != NULL)
 		{
 			tmp = tmp->next;
 		}
-		cout<<tmp->next->value<<" Berhasil dihapus\n";
-		delete tmp->next;
-		tmp->next = NULL;
+		tmpDel = tmp->next;
+		tail   = tmp;
+		tail->next = NULL;
+		cout<<tmpDel->value<<" Berhasil dihapus\n";
+		delete tmpDel;
 	}
 }
 
