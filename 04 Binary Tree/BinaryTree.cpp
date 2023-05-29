@@ -67,14 +67,14 @@ Node *BinaryTree::findMin(){
 Node *BinaryTree::findMinRecursive(Node* currentRoot){
 	if (currentRoot == NULL){
 		cout<<"Root adalah null atau Binary Tree Kosong\n";
-    }
-    else if(currentRoot->left != NULL){
-    	findMinRecursive(currentRoot->left);
+    	}
+    	else if(currentRoot->left != NULL){
+    		findMinRecursive(currentRoot->left);
 	}
 	else{
 		cout<<"Nilai Minimum pada Binary Tree : " <<currentRoot->val<<"\n";
-    }
-    return currentRoot;
+    	}
+    	return currentRoot;
 }
 
 Node *BinaryTree::findMax(){
